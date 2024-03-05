@@ -1,0 +1,285 @@
+.memo-section {
+    min-width: 600px;
+    height: 600px;
+    overflow: auto;
+    background-color: white;
+}
+
+.memo-section::-webkit-scrollbar {
+    display: none;
+}
+
+.memo-box {
+    position: relative;
+    height: 600px;
+}
+
+.memo-table {
+    width: 100%;
+}
+
+.memo-real-title {
+    position: static;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    height: 52px;
+    padding: 1rem 2rem;
+}
+
+
+.memo-content {
+    font-size: 16px;
+}
+
+.memo-content td {
+    padding: 4px 10px;
+}
+
+.memo-border {
+    vertical-align: middle;
+    line-height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+.memo-title {
+    display: inline-block;
+}
+
+.memo-writer {
+    margin-left: auto;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.memo-date {
+    display: inline-block;
+    color: gray;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.memo-delete {
+    display: inline-block;
+    color: gray;
+    margin-right: 30px;
+}
+
+.memo-arrow {
+    position: absolute;
+    right: 15px;
+    top: 27px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border: 2px solid gray;
+    border-width: 3px 3px 0 0;
+    transform: rotate(45deg);
+}
+
+.memo-plus-button-wrap {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.memo-plus-button {
+    border: none;
+    background-color: #777;
+    font-size: 16px;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+    opacity: 0.5;
+
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:before {
+        height: 1em;
+        width: 0.2em;
+    }
+
+    &:after {
+        height: 0.2em;
+        width: 1em;
+    }
+}
+
+.memo-detail-box {
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    height: 600px;
+}
+
+.memo-detail-arrow {
+    position: absolute;
+    left: 30px;
+    top: 27px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid gray;
+    border-width: 3px 3px 0 0;
+    transform: rotate(-135deg);
+    cursor: pointer;
+}
+
+.memo-detail-title {
+    padding-top: 60px;
+    padding-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.memo-detail-content {
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.memo-modify-btn {
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    display: block;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(119, 119, 119);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.memo-save-btn {
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    display: block;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(119, 119, 119);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.memo-modify-title {
+    width: 540px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+    margin-top: 80px;
+    margin-left: 30px;
+
+}
+
+.memo-modify-detail {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 540px;
+    height: 400px;
+    font-size: 18px;
+    background-color: #8b8b8b1c;
+    resize: none;
+    color: black;
+    border: none;
+    border-bottom: 2px solid #0000007e;
+    outline: none;
+}
+
+
+.memo-create-btn {
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    display: block;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(119, 119, 119);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.memo-create-title {
+    width: 540px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+    margin-top: 80px;
+    margin-left: 30px;
+
+}
+
+.memo-create-detail {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 540px;
+    height: 400px;
+    font-size: 18px;
+    background-color: #8b8b8b1c;
+    resize: none;
+    color: black;
+    border: none;
+    border-bottom: 2px solid #0000007e;
+    outline: none;
+}
+
+.noMemo{
+    margin: 250px 0;
+    text-align: center;
+}
+
+@keyframes memoFadeIn {
+    from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+}
+
+.memo-detail-box {
+    animation: memoFadeIn 0.5s ease-in-out;
+}
+
+.memo-box{
+    animation: memoFadeIn 0.5s ease-in-out;
+}

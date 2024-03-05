@@ -1,0 +1,291 @@
+/* 달력 */
+.schedule-section .dateHead {
+  position: sticky;
+  top: 0;
+}
+
+.schedule-section .dateHead div {
+  background: #e31b20;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.schedule-section .grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 5px;
+}
+
+.schedule-section .grid div {
+  padding: .6rem;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.schedule-section .dateBoard div {
+  color: #222;
+  font-weight: bold;
+  min-height: 6rem;
+  padding: .6rem .8rem;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.schedule-section .noColor {
+  background: #eee;
+}
+
+.schedule-section .header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  padding: 1rem 2rem;
+}
+
+/* 좌우 버튼 */
+.schedule-section .btn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #000;
+  border-width: 3px 3px 0 0;
+  cursor: pointer;
+}
+
+.schedule-section .prevDay {
+  transform: rotate(-135deg);
+}
+
+.schedule-section .nextDay {
+  transform: rotate(45deg);
+}
+
+.schedule-section .rap {
+  max-width: 820px;
+  max-height: 700px;
+  padding: 0 1.4rem;
+  position: relative;
+}
+
+.schedule-section .dateHead {
+  margin: .4rem 0;
+}
+
+
+.schedule-plus-button-wrap {
+  right: 40px;
+  position: absolute;
+  bottom: 40px;
+}
+
+.schedule-plus-button {
+  margin-right: 40px;
+  border: none;
+  background-color: #777;
+  font-size: 16px;
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:after,
+  &:before {
+      content: "";
+      display: block;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  &:before {
+      height: 1em;
+      width: 0.2em;
+  }
+
+  &:after {
+      height: 0.2em;
+      width: 1em;
+  }
+}
+
+.schedule-modify {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.schedule-delete {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.schedule-save {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.schedule-cancel {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.schedule-modify-title {
+  width: 215px;
+  color: white;
+  border: 0;
+  border-bottom: 2px solid white;
+  background-color: rgb(68, 68, 68);
+  font-size: 20px;
+  outline: none;
+  padding : 3px 0;
+}
+
+.schedule-modify-date {
+  width: 200px;
+  border: 0;
+  border-bottom: 2px solid white;
+  background-color: rgb(68, 68, 68);
+  font-size: 15px;
+  padding: 3px 0;
+}
+
+.schedule-modify-location {
+  width: 550px;
+  color: white;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid white;
+  background-color: rgb(68, 68, 68);
+  font-size: 15px;
+  padding: 3px 0;
+}
+
+.schedule-section {
+  height: 600px;
+  overflow: auto;
+  background-color: white;
+}
+
+.schedule-section::-webkit-scrollbar {
+  display: none;
+}
+
+
+.schedule-section .hasTask {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.schedule-detail-wrap {
+  width: 100%;
+  height: 200px;
+  position: sticky;
+  bottom: 0px;
+  background-color: rgb(68, 68, 68);
+  border-radius: 10px 10px 0 0;
+  overflow: auto;
+}
+
+.schedule-detail-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.schedule-detail-box {
+  padding: 10px;
+  position: relative;
+}
+
+.schedule-detail-title {
+  display: inline-block;
+  font-size: 20px;
+  color: white;
+}
+
+.schedule-color {
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(228, 65, 179);
+  cursor: pointer;
+}
+
+.schedule-detail-date {
+  margin: 10px 0;
+  font-size: 15px;
+  color: white;
+}
+
+.schedule-location {
+  margin: 10px 0;
+  font-size: 15px;
+  color: white;
+}
+
+@keyframes scheduleFadeIn {
+  from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+}
+
+.schedule-detail-wrap {
+  animation: scheduleFadeIn 0.5s ease-in-out;
+}
+
+.color1 {
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+}
+
+.schedule-modify-color {
+  position: absolute;
+  padding: 10px;
+  width: 120px;
+  height: 150px;
+  top: 10px;
+  border-radius: 10px;
+  background-color: black;
+  display: none;
+}
+
+.schedule-color-detail {
+  color: white;
+  cursor: pointer;
+}

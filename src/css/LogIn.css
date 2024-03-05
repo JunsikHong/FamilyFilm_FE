@@ -1,0 +1,214 @@
+.login-section {
+    background-color: antiquewhite;
+}
+
+.login-box {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #777;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-title {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.input-idpw {
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+}
+
+.id {
+    margin: 7px 0;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pw {
+    margin: 7px 0;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-btn-wrap {
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.login-btn {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    background-color: rgb(0, 110, 255);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 7px 0;
+    cursor: pointer;
+
+}
+
+.api-login-btn {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    background-color: rgb(206, 206, 77);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 7px 0;
+    cursor: pointer;
+
+}
+
+.join-btn {
+    display: inline-block;
+    width: 250px;
+    height: 30px;
+    background-color: #bbbbbb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 7px 0;
+    cursor: pointer;
+}
+
+.login-arrow {
+    position: absolute;
+    left: 15px;
+    top: 27px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid gray;
+    border-width: 3px 3px 0 0;
+    transform: rotate(-135deg);
+    cursor: pointer;
+}
+
+.join-title {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.join-btn-wrap {
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.join-input {
+    margin: 0;
+    margin-top: 10px;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+@keyframes joinFadeIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.join-outer-box {
+    animation: joinFadeIn 0.5s ease-in-out;
+}
+
+.indexBtn-wrap {
+    padding-top: 40px;
+    margin: 0 auto;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.indexBtn {
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 50%;
+    border: none;
+    background-color: aqua;
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.active {
+    color: red;
+    width: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.idCheck {
+    display: inline-block;
+    width: 250px;
+    margin: 2px 0;
+    text-align: left;
+    font-size: 12px;
+}
+
+.pwCheck {
+    display: inline-block;
+    width: 250px;
+    margin: 2px 0;
+    text-align: left;
+    font-size: 12px;
+}
+
+.pw-checkCheck {
+    display: inline-block;
+    width: 250px;
+    margin: 2px 0;
+    text-align: left;
+    font-size: 12px;
+}
+
+.nameCheck {
+    display: inline-block;
+    width: 250px;
+    margin: 2px 0;
+    text-align: left;
+    font-size: 12px;
+}
+
+.birthCheck {
+    display: inline-block;
+    width: 250px;
+    margin: 2px 0;
+    text-align: left;
+    font-size: 12px;
+    color: red;
+}
+
+input[type="date"]:not(.has-value):before{
+    color: lightgray;
+    padding: 0 5px;
+    content: attr(data-placeholder);
+    width: calc(100% - 29px);
+  }
