@@ -25,6 +25,7 @@
 
 .schedule-section .dateBoard div {
   color: #222;
+  background-color: white;
   font-weight: bold;
   min-height: 6rem;
   padding: .6rem .8rem;
@@ -33,7 +34,7 @@
 }
 
 .schedule-section .noColor {
-  background: #eee;
+  background-color: #FFB29D;
 }
 
 .schedule-section .header {
@@ -158,38 +159,47 @@
 .schedule-modify-title {
   width: 215px;
   color: white;
+  background-color: #FFB29D;
   border: 0;
   border-bottom: 2px solid white;
-  background-color: rgb(68, 68, 68);
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
   outline: none;
   padding : 3px 0;
 }
 
-.schedule-modify-date {
-  width: 200px;
-  border: 0;
+.schedule-underline {
   border-bottom: 2px solid white;
-  background-color: rgb(68, 68, 68);
+  margin-right: 5px;
+}
+
+.schedule-modify-date {
+  width: 20px;
+  border: 0;
+  color: white;
+  background-color: #FFB29D;
   font-size: 15px;
   padding: 3px 0;
 }
 
 .schedule-modify-location {
-  width: 550px;
+  width: 450px;
   color: white;
   border: 0;
   outline: none;
   border-bottom: 2px solid white;
-  background-color: rgb(68, 68, 68);
-  font-size: 15px;
+  background-color: #FFB29D;
+  font-size: 20px;
+  font-weight: bold;
   padding: 3px 0;
 }
 
 .schedule-section {
+  margin-left: 20px;
   height: 600px;
   overflow: auto;
-  background-color: white;
+  border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.25);
 }
 
 .schedule-section::-webkit-scrollbar {
@@ -210,7 +220,7 @@
   height: 200px;
   position: sticky;
   bottom: 0px;
-  background-color: rgb(68, 68, 68);
+  background-color: #FFB29D;
   border-radius: 10px 10px 0 0;
   overflow: auto;
 }
@@ -241,14 +251,15 @@
 }
 
 .schedule-detail-date {
-  margin: 10px 0;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: bold;
   color: white;
 }
 
 .schedule-location {
   margin: 10px 0;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: bold;
   color: white;
 }
 

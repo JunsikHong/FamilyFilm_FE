@@ -8,11 +8,15 @@
     font-family: Pretendard;
 }
 
+.main-wrap {
+    background-image: url('img/familyfilmmainbackground.png');
+}
+
 .main-section {
     padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    background-color: antiquewhite;
+    width: 1350px;
+    margin: 0 auto;
+    padding: 20px 20px;
     display: grid;
     grid-template-columns: 1fr 2fr;
 }

@@ -1,4 +1,4 @@
-import logo from 'img/familyfilm96.png';
+import logo from 'img/familyfilmicon.png';
 import 'css/RegistFamily.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -27,10 +27,11 @@ export default function RegistFamily() {
             }
         })
         .then(response => {
-            if(response.data === 1) {
-                navigate('/');
+            if(response.data === 'fail') {
+                window.alert('등록에 실패하였습니다.');                
             } else {
-                window.alert('등록에 실패하였습니다.');
+                localStorage.setItem('family_group_num', response.data);
+                navigate('/');
             }
         });
 
@@ -38,6 +39,7 @@ export default function RegistFamily() {
     
     return (
         <>
+        <div className='regist-family-back'>
             <div className='regist-family-wrap'>
                 <div className='regist-family-box'>
                     <div className='regist-family-left'>
@@ -60,6 +62,7 @@ export default function RegistFamily() {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </>
     );

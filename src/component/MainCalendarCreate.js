@@ -18,16 +18,15 @@ export default function MainCalendarCreate({ scheduleState, act, setSchedule, sc
         $('.selColor').css('background-color', $(e.target).css('background-color'));
         $('.schedule-modify-color').css('display', 'none');
     }
-
     //저장 누를 때 저장하기
     function saveNewSchedule() {
         axios.post('/saveNewSchedule',
             {
                 schedule_color: $('.selColor').css('background-color'),
                 schedule_title: $('.schedule-modify-title').val(),
-                schedule_date: $('.schedule-modify-date').val(),
+                schedule_date: scheduleState.detail,
                 schedule_location: $('.schedule-modify-location').val(),
-                family_proper_num: localStorage.getItem('family_proper_num')
+                family_group_num: localStorage.getItem('family_group_num')
             },
             {
                 headers: {
@@ -41,7 +40,7 @@ export default function MainCalendarCreate({ scheduleState, act, setSchedule, sc
                 console.log($('.schedule-modify-date').val());
                 axios.post('/getScheduleDetail',
                     {
-                        family_proper_num: localStorage.getItem('family_proper_num'),
+                        family_group_num: localStorage.getItem('family_group_num'),
                         scheduleDate: $('.schedule-modify-date').val()
                     },
                     {
@@ -54,7 +53,7 @@ export default function MainCalendarCreate({ scheduleState, act, setSchedule, sc
                 ).then(response => {
                     axios.post('/getSchedule',
                         {
-                            family_proper_num: localStorage.getItem('family_proper_num'),
+                            family_group_num: localStorage.getItem('family_group_num'),
                             scheduleDate: scheduleDate
                         },
                         {
@@ -103,6 +102,7 @@ export default function MainCalendarCreate({ scheduleState, act, setSchedule, sc
                         <input className="schedule-modify-title" name="schedule-modify-title" type="text" placeholder="제목"></input>
                         <div className="schedule-detail-date">
                             <span className="schedule-modify-span">날짜 : </span>
+                            <span className='schedule-underline'>{scheduleState.detail}</span>
                             <input className="schedule-modify-date" name="schedule-modify-date" type="date" defaultValue={scheduleState.detail}></input>
                         </div>
                         <div className="schedule-location">

@@ -29,7 +29,7 @@ export default function MainCalendarDetail({ scheduleState, act, setSchedule, sc
                 schedule_title: $('.schedule-modify-title').val(),
                 schedule_date: $('.schedule-modify-date').val(),
                 schedule_location: $('.schedule-modify-location').val(),
-                family_proper_num: localStorage.getItem('family_proper_num')
+                family_group_num: localStorage.getItem('family_group_num')
             },
             {
                 headers: {
@@ -43,7 +43,7 @@ export default function MainCalendarDetail({ scheduleState, act, setSchedule, sc
                 console.log($('.schedule-modify-date').val());
                 axios.post('/getScheduleDetail',
                     {
-                        family_proper_num: localStorage.getItem('family_proper_num'),
+                        family_group_num: localStorage.getItem('family_group_num'),
                         scheduleDate: $('.schedule-modify-date').val()
                     },
                     {
@@ -56,7 +56,7 @@ export default function MainCalendarDetail({ scheduleState, act, setSchedule, sc
                 ).then(response => {
                     axios.post('/getSchedule',
                         {
-                            family_proper_num: localStorage.getItem('family_proper_num'),
+                            family_group_num: localStorage.getItem('family_group_num'),
                             scheduleDate: scheduleDate
                         },
                         {

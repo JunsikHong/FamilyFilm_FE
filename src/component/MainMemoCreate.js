@@ -16,7 +16,7 @@ export default function MainMemoCreate({ memoState, act }) {
             {
                 memo_title : $('.memo-create-title').val(),
                 memo_content : $('.memo-create-detail').val(),
-                family_proper_num : localStorage.getItem('family_proper_num')
+                family_group_num : localStorage.getItem('family_group_num')
             },
             {
                 headers: {

@@ -1,4 +1,16 @@
+.regist-family-back {
+    height: 100vh;
+    background-image: url('img/familyfilmbackground.png');
+}
+
 .regist-family-wrap {
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+      0 10px 10px rgba(0,0,0,0.22);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 800px;
     margin: 0 auto;
 }
@@ -6,18 +18,14 @@
 .regist-family-box {
     width: 100%;
     height: 400px;
-    margin-top: 200px;
-    border: 1px solid #777;
     overflow: hidden;
 }
 
 .regist-family-left {
+    text-align: center;
     float: left;
     width: 50%;
     height: 100%;
-    border: 1px solid #777;
-    display: flex;
-    align-items: center;
     padding: 0 20px;
 }
 
@@ -25,17 +33,17 @@
     float: right;
     width: 50%;
     height: 100%;
-    border: 1px solid #777;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .regist-family-logo {
-    width: 70px;
+    margin-top: 100px;
+    width: 300px;
 }
 
 .regist-family-title {
-    margin-left: 10px;
-    font-size: 18px;
+    color: #FFB29D;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -47,7 +55,16 @@
 .family-input,
 .regist-family-button {
     width: 100%;
-    height: 28px;
-    font-size: 16px;
+    height: 35px;
+    font-size: 20px;
     margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.regist-family-button {
+    background-color: #FFB29D;
+    color: white;
+    font-weight: bold;
 }

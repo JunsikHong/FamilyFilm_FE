@@ -10,7 +10,7 @@ export default function MyPage({loginYNAct}) {
         localStorage.removeItem('loginYN');
         localStorage.removeItem('token');
         localStorage.removeItem('refreshToken');
-        localStorage.removeItem('family_proper_num');
+        localStorage.removeItem('family_group_num');
         loginYNAct({state : 'fail'});
         navigate('/LogIn');
     }

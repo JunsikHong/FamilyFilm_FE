@@ -10,7 +10,7 @@ export default function FamimlyPlus({invitePublishFunc}) {
     useEffect(() => {
         axios.post('/getFamilyInfo',
         {
-            family_proper_num : localStorage.getItem('family_proper_num')
+            family_group_num : localStorage.getItem('family_group_num')
         },
         {
             headers : {

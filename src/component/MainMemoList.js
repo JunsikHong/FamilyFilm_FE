@@ -34,7 +34,7 @@ export default function MainMemoList() {
     useEffect(() => {
         axios.post('/getMemo', 
         {
-            family_proper_num : localStorage.getItem('family_proper_num')
+            family_group_num : localStorage.getItem('family_group_num')
         }, 
         {
             headers: {
@@ -141,11 +141,18 @@ export default function MainMemoList() {
                                             <tr className="memo-content" key={index}>
                                                 <td>
                                                     <div className="memo-border">
-                                                        <p className="memo-title">{element.memo_title}</p>
-                                                        <p className="memo-writer">{element.family_relationship_proper_num}</p>
-                                                        <p className="memo-date">{dateChange(element.memo_modify_date)}</p>
-                                                        <p className='memo-delete' onClick={() => { deleteMemo(element.memo_proper_num) }}>삭제</p>
-                                                        <p className="memo-arrow" onClick={() => { getMemoDetail(element.memo_proper_num) }}></p>
+                                                        <div className='memo-title-content-box'>
+                                                            <p className="memo-title">{element.memo_title}</p>
+                                                            <p className='memo-limit-content'>{element.memo_content}</p>
+                                                        </div>
+                                                        <div className='memo-writer-date-delete-box'>
+                                                            
+                                                            <p className='memo-writer'>{element.family_relationship_proper_num}</p>
+                                                            <p className='memo-date'>{dateChange(element.memo_modify_date)}</p>
+                                                            
+                                                            <p className='memo-delete' onClick={() => { deleteMemo(element.memo_proper_num) }}>삭제</p>
+                                                            <p className="memo-arrow" onClick={() => { getMemoDetail(element.memo_proper_num) }}></p>
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>

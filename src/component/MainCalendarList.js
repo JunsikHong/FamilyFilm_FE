@@ -30,7 +30,7 @@ export default function MainCalendarList() {
     useEffect(() => {
         axios.post('/getSchedule', 
             { 
-                family_proper_num : localStorage.getItem('family_proper_num'),
+                family_group_num : localStorage.getItem('family_group_num'),
                 scheduleDate: scheduleDate 
             },
             {
@@ -58,7 +58,7 @@ export default function MainCalendarList() {
                 const currentMonth = scheduleDate.getMonth() + 1;
                 axios.post('/getScheduleDetail',
                     { 
-                        family_proper_num : localStorage.getItem('family_proper_num'),
+                        family_group_num : localStorage.getItem('family_group_num'),
                         scheduleDate: currentYear + '-' + currentMonth + '-' + $(e.target).text() 
                     },
                     {
@@ -85,6 +85,7 @@ export default function MainCalendarList() {
                 } else {
                     createDate += $(e.target).text();
                 }
+                
                 act({
                     state: 'MainScheduleCreate',
                     detail: createDate

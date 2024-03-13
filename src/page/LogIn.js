@@ -4,6 +4,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import Join from 'component/Join';
 import { useNavigate } from 'react-router-dom';
+import familyfilmicon from 'img/familyfilmicon.png';
 
 const loginStateFunc = (state, action) => {
     state = {
@@ -47,7 +48,7 @@ export default function LogIn({ loginYNAct }) {
                         loginYNAct({ state: 'success' });
                         navigate('/RegistFamily');
                     } else if (response.data.length >= 1) {
-                        localStorage.setItem('family_proper_num', response.data[0].family_proper_num);
+                        localStorage.setItem('family_group_num', response.data[0].family_group_num);
                         localStorage.setItem('token', token);
                         localStorage.setItem('refreshToken', refreshtoken);
                         localStorage.setItem('loginYN', 'success');
@@ -80,9 +81,10 @@ export default function LogIn({ loginYNAct }) {
                 <div className="login-box">
                     {loginState.state === 'login' && (
                         <div className="login-wrap">
-                            <div className='login-title'>
-                                함께 이야기를 만들어가요
+                            <div className='icon-box'>
+                                <img className='familyicon' src={familyfilmicon}></img>
                             </div>
+                           
                             <div className="input-idpw">
                                 <input type="text" name='id' className="id" placeholder="아이디를 입력하세요"></input>
                                 <input type="password" name='pw' className="pw" placeholder="비밀번호를 입력하세요"></input>

@@ -26,7 +26,7 @@ export default function MainCalendarDetail({ scheduleState, act, setSchedule, sc
                     alert('삭제 되었습니다.');
                     axios.post('/getSchedule',
                         {
-                            family_proper_num: localStorage.getItem('family_proper_num'),
+                            family_group_num: localStorage.getItem('family_group_num'),
                             scheduleDate: scheduleDate
                         },
                         {
